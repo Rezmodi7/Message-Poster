@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ZenChain DApp - دو زبانه</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- ethers v5 -->
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">🌐 ZenChain DApp</div>
+    <div class="lang-switch">
+      <button id="langToggle">EN</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h1 data-i18n="title">ثبت پیام روی ZenChain Testnet</h1>
+      <div id="walletArea">
+        <div id="status" data-i18n="status">وضعیت: قطع</div>
+        <div class="wallet-buttons">
+          <button id="connectBtn" data-i18n="connectBtn">اتصال کیف‌پول</button>
+          <button id="disconnectBtn" class="secondary" data-i18n="disconnectBtn">قطع اتصال (محلی)</button>
+        </div>
+        <div id="accountInfo" class="muted"></div>
+      </div>
+    </section>
+
+    <section id="appArea" class="card hidden">
+      <h2 data-i18n="formTitle">ارسال پیام</h2>
+      <label for="messageInput" data-i18n="messageLabel">پیام کوتاه (حداکثر 200 کاراکتر)</label>
+      <textarea id="messageInput" maxlength="200" rows="3"></textarea>
+      <div class="row">
+        <button id="sendBtn" data-i18n="sendBtn">ارسال تراکنش</button>
+        <select id="gasHint">
+          <option value="low" data-i18n="gasLow">گس: کم</option>
+          <option value="normal" selected data-i18n="gasNormal">گس: معمولی</option>
+          <option value="fast" data-i18n="gasFast">گس: سریع</option>
+        </select>
+      </div>
+      <div id="txStatus" class="muted"></div>
+      <div id="lastTx" class="muted"></div>
+    </section>
+
+    <footer class="card muted">
+      <p data-i18n="footerText">
+        شبکه: ZenChain Testnet — Chain ID: 8408 — واحد: ZTC
+      </p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
