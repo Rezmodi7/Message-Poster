@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ZenChain DApp - دو زبانه</title>
+  <title data-i18n="title">ثبت پیام روی ZenChain Testnet</title>
   <link rel="stylesheet" href="style.css" />
   <!-- ethers v5 -->
   <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.min.js"></script>
@@ -17,6 +17,7 @@
   </header>
 
   <main class="container">
+    <!-- اتصال کیف پول -->
     <section class="card">
       <h1 data-i18n="title">ثبت پیام روی ZenChain Testnet</h1>
       <div id="walletArea">
@@ -29,6 +30,7 @@
       </div>
     </section>
 
+    <!-- ارسال پیام -->
     <section id="appArea" class="card hidden">
       <h2 data-i18n="formTitle">ارسال پیام</h2>
       <label for="messageInput" data-i18n="messageLabel">پیام کوتاه (حداکثر 200 کاراکتر)</label>
